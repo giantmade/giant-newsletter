@@ -1,8 +1,26 @@
 [tool.poetry]
 name = "giant-newsletter"
 version = "0.1.0"
-description = ""
-authors = ["Will-Hoey <will.hoey@hotmail.co.uk>"]
+description = "A small reusable package that adds a Newsletter app to a project"
+authors = ["Will-Hoey <will.hoey@giantmade.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/giantmade/giant-newsletter"
+repository = "https://github.com/giantmade/giant-newsletter"
+keywords = ["newsletter", "app"]
+classifiers = [
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+include = [
+    "LICENSE",
+]
+packages = [
+    { include = "newsletter" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.6"
