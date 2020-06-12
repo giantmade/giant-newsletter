@@ -1,0 +1,1 @@
+- Add in settings file as well as conditionals to use one setting OR another 
