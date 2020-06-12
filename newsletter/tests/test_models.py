@@ -1,14 +1,15 @@
 import pytest
 
-from newsletter import models
-
 
 @pytest.importorskip("django.settings.INSTALLED_APPS")
 @pytest.mark.django_db
 class TestSubscription:
+    # import models here to avoid error
+    from newsletter import models
+
     @pytest.fixture
     def subscription_instance(self):
-        return models.Subscription.objects.create(
+        return self.models.Subscription.objects.create(
             first_name="John", last_name="doe", email="john@doe.com",
         )
 
@@ -16,7 +17,7 @@ class TestSubscription:
         """
         Test for subscription instance
         """
-        subscription = models.Subscription.objects.get(
+        subscription = self.models.Subscription.objects.get(
             email=subscription_instance.email
         )
 
