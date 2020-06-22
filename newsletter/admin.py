@@ -16,7 +16,7 @@ class SubscriptionAdmin(admin.ModelAdmin):
     readonly_fields = getattr(
         settings,
         "NEWSLETTER_ADMIN_READONLY_FIELDS",
-        ["first_name", "last_name", "email"],
+        ["created_at", "updated_at"],
     )
     fieldsets = getattr(
         settings,
