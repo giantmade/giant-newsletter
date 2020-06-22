@@ -1,4 +1,5 @@
-from django.shortcuts import redirect
+from django.urls import reverse
+from django.shortcuts import redirect, render
 
 from . import forms
 
@@ -9,10 +10,10 @@ def index(request):
     """
     form = forms.SubscriptionForm(data=request.POST or None)
 
-    url = request.META.get("HTTP_REFERER", "/")
-
     if form.is_valid():
         form.save()
-        return redirect(f"{url}?newsletter")
+        return redirect(reverse("newsletter:index") + "?thanks")
 
-    return redirect(url)
+    return render(
+        request, "./newsletter_index.html", {"form": form, "thanks": "thanks" in request.GET}
+    )
