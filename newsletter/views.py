@@ -15,5 +15,7 @@ def index(request):
         return redirect(reverse("newsletter:index") + "?thanks")
 
     return render(
-        request, "./newsletter_index.html", {"form": form, "thanks": "thanks" in request.GET}
+        request,
+        "./newsletter_index.html",
+        {"form": form, "thanks": "thanks" in request.GET},
     )

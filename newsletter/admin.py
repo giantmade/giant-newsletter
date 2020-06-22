@@ -14,9 +14,7 @@ class SubscriptionAdmin(admin.ModelAdmin):
         settings, "NEWSLETTER_ADMIN_LIST_DISPLAY", ["email", "created_at"]
     )
     readonly_fields = getattr(
-        settings,
-        "NEWSLETTER_ADMIN_READONLY_FIELDS",
-        ["created_at", "updated_at"],
+        settings, "NEWSLETTER_ADMIN_READONLY_FIELDS", ["created_at", "updated_at"],
     )
     fieldsets = getattr(
         settings,
