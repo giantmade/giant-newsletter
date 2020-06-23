@@ -8,8 +8,7 @@ class Subscription(TimestampMixin):
     Represents a subscription object
     """
 
-    first_name = models.CharField(max_length=255)
-    last_name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, blank=True)
     email = models.EmailField(unique=True)
 
     class Meta:
