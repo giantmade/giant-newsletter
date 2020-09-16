@@ -8,15 +8,14 @@ class SubscriptionForm(ModelForm):
     """
     Modelform for subscription model
     """
+
     required_fields = getattr(settings, "NEWSLETTER_FORM_REQUIRED_FIELDS", [])
     field_placeholders = getattr(settings, "NEWSLETTER_FORM_FIELD_PLACEHOLDERS", {})
 
     class Meta:
         model = models.Subscription
         fields = getattr(
-            settings,
-            "NEWSLETTER_FORM_FIELDS",
-            ["first_name", "last_name", "email"],
+            settings, "NEWSLETTER_FORM_FIELDS", ["first_name", "last_name", "email"],
         )
         labels = getattr(settings, "NEWSLETTER_FORM_LABELS", None)
         widgets = getattr(settings, "NEWSLETTER_FORM_WIDGETS", None)

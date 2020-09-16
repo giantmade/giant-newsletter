@@ -4,7 +4,6 @@ from django.test import Client
 from django.urls import resolve, reverse
 
 
-@pytest.importorskip("django.settings.INSTALLED_APPS")
 class TestIndexView:
     def test_index_url(self):
         """
