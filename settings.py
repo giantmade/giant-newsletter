@@ -53,3 +53,5 @@ LANGUAGE_CODE = 'en-gb'
 LANGUAGES = [
     ('en-gb', 'English'),
 ]
+
+ROOT_URLCONF = "newsletter.tests.urls"
