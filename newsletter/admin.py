@@ -20,7 +20,18 @@ class SubscriptionAdmin(admin.ModelAdmin):
         settings,
         "NEWSLETTER_ADMIN_FIELDSETS",
         [
-            (None, {"fields": ["first_name", "last_name", "email"]}),
+            (
+                None,
+                {
+                    "fields": [
+                        "first_name",
+                        "last_name",
+                        "email",
+                        "company",
+                        "accepted_terms",
+                    ]
+                },
+            ),
             (
                 "Meta Data",
                 {"classes": ("collapse",), "fields": ["created_at", "updated_at"]},

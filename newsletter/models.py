@@ -11,6 +11,8 @@ class Subscription(TimestampMixin):
     first_name = models.CharField(max_length=255, blank=True)
     last_name = models.CharField(max_length=255, blank=True)
     email = models.EmailField(unique=True)
+    company = models.CharField(max_length=255, blank=True)
+    accepted_terms = models.BooleanField(default=False)
 
     class Meta:
         ordering = ["-created_at"]
