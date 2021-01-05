@@ -24,7 +24,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.6"
-giant-mixins = "^0.1.1"
+giant-mixins = "*"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
