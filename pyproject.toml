@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "giant-newsletter"
-version = "0.3"
+version = "0.3.1"
 description = "A small reusable package that adds a Newsletter app to a project"
 authors = ["Will-Hoey <will.hoey@giantmade.com>"]
 license = "MIT"
