@@ -5,3 +5,6 @@
 *.egg-info
 poetry.lock
 dist
+.coverage
+test-reports
+giant-newsletter

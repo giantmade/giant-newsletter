@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "giant-newsletter"
-version = "0.2.1"
+version = "0.3"
 description = "A small reusable package that adds a Newsletter app to a project"
 authors = ["Will-Hoey <will.hoey@giantmade.com>"]
 license = "MIT"
@@ -31,6 +31,9 @@ pytest = "^5.2"
 django = "2.2"
 django-cms = "^3.7.2"
 black = "^19.10b0"
+pytest-cov = "^2.10.1"
+pytest-django = "^3.10.0"
+six = "^1.15.0"
 
 [[tool.poetry.source]]
 name = "TestPyPi"

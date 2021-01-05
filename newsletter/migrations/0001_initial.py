@@ -27,9 +27,7 @@ class Migration(migrations.Migration):
                 ("created_at", models.DateTimeField(default=django.utils.timezone.now)),
                 (
                     "updated_at",
-                    mixins.fields.AutoDateTimeField(
-                        default=django.utils.timezone.now
-                    ),
+                    mixins.fields.AutoDateTimeField(default=django.utils.timezone.now),
                 ),
                 ("first_name", models.CharField(max_length=128)),
                 ("last_name", models.CharField(max_length=128)),
