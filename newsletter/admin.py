@@ -3,9 +3,11 @@ from django.contrib import admin
 
 from . import models
 
+from mixins.admin import CSVAdminMixin
+
 
 @admin.register(models.Subscription)
-class SubscriptionAdmin(admin.ModelAdmin):
+class SubscriptionAdmin(CSVAdminMixin):
     """
     Admin for subscription model
     """
