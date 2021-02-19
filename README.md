@@ -24,3 +24,4 @@ In `base.py` there should also be a `DEFAULT_FROM_EMAIL` and a `DEFAULT_TO_EMAIL
 - `NEWSLETTER_FORM_REQUIRED_FIELDS` allows the user to customise what fields are required on the form. This must be a list
 - `NEWSLETTER_FORM_LABELS` allows the user to customise what the field labels are on the form. This must be a dict of field names and their corresponding label
 - `NEWSLETTER_FORM_WIDGETS` allows the user to customise what the field widgets are on the form. This must be a dict of field names and their corresponding widget
+- `NEWSLETTER_HTTP_REFERER` allows the user to customise the success url and return the user to the referer page after submission
