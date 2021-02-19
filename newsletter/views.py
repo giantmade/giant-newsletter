@@ -12,10 +12,14 @@ def index(request):
     form = forms.SubscriptionForm(data=request.POST or None)
 
     success_url = getattr(settings, "NEWSLETTER_SUCCESS_URL", "newsletter:index")
+    http_referer = getattr(settings, "NEWSLETTER_HTTP_REFERER", False)
+
     template_name = "newsletter/index.html"
 
     if form.is_valid():
         form.save()
+        if http_referer:
+            success_url = request.META.get("HTTP_REFERER")
         return redirect(reverse(success_url) + "?thanks")
 
     return render(
