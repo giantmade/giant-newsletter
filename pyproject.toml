@@ -27,13 +27,13 @@ python = "^3.6"
 giant-mixins = "*"
 
 [tool.poetry.dev-dependencies]
-pytest = "^7"
-django = "^3"
-django-cms = "^3"
-black = "^22"
-pytest-cov = "^4"
-pytest-django = "^3"
-six = "^1"
+pytest = "~7"
+django = "~3"
+django-cms = "~3"
+black = "~22"
+pytest-cov = "~4"
+pytest-django = "~3"
+six = "~1"
 
 [[tool.poetry.source]]
 name = "TestPyPi"
