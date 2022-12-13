@@ -23,17 +23,17 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.6.2"
 giant-mixins = "*"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
-django = "2.2"
-django-cms = "^3.7.2"
-black = "^19.10b0"
-pytest-cov = "^2.10.1"
-pytest-django = "^3.10.0"
-six = "^1.15.0"
+pytest = "~7"
+django = "~3"
+django-cms = "~3"
+black = "~22"
+pytest-cov = "~4"
+pytest-django = "~3"
+six = "~1"
 
 [[tool.poetry.source]]
 name = "TestPyPi"
