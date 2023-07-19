@@ -1,10 +1,12 @@
 from django.urls import reverse
 from django.conf import settings
 from django.shortcuts import redirect, render
+from django.views.decorators.csrf import csrf_exempt
 
 from . import forms
 
 
+@csrf_exempt
 def index(request):
     """
     Index view for newsletter app

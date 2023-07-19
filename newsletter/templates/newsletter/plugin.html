@@ -5,7 +5,6 @@
         <p>Thank you. You have now subscribed to our newsletter.</p>
     {% else %}
         <form method="post">
-            {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Submit</button>
         </form>
